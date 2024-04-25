@@ -45,7 +45,7 @@
   position: relative;
   box-sizing: border-box;
   border-radius: 0;
-  border: var(--border-width) solid rgba(var(--color-foreground), var(--border-opacity));
+  border: 1px solid;
 }
 
 .card--card:after,
@@ -58,8 +58,8 @@
   top: calc(var(--border-width) * -1);
   left: calc(var(--border-width) * -1);
   border-radius: var(--border-radius);
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
-    rgba(var(--color-shadow), var(--shadow-opacity));
+  /* box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset) var(--shadow-blur-radius)
+    rgba(var(--color-shadow), var(--shadow-opacity)); */
 }
 
 /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
@@ -152,6 +152,8 @@
 
 .card:not(.ratio) > .card__content {
   grid-template-rows: max-content minmax(0, 1fr) max-content auto;
+  padding: 10px;
+  border: 1px solid;
 }
 
 .card-information .card__information-volume-pricing-note {
@@ -321,8 +323,8 @@
 }
 
 .card--standard > .card__content .card__information {
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .card--card.card--media .card__inner .card__information,
